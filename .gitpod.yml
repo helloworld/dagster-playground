@@ -6,6 +6,9 @@ image:
     - port: 3000
       onOpen: open-preview
 
-  # This will make it so that on workspace start it will run a file called `app.py`
-  tasks:
-    - command: dagit
+tasks:
+- init: pip3 install -r requirements.txt
+    command: clear && dagit
+    name: Split terminal
+- openMode: split-right
+    command: echo SplitTerminal && clear
