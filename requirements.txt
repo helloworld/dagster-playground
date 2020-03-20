@@ -1,2 +1,2 @@
-dagster==0.7.1
-dagit==0.7.1
+dagster==0.7.4
+dagit==0.7.4
