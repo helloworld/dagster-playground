@@ -7,8 +7,10 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - init: pip3 install -r requirements.txt
-    command: clear && dagit
-    name: Split terminal
+  - command: |
+      cd $EXAMPLE
+      pip3 install -r requirements.txt
+      [ -e README.md ] && gp open README.md
+      clear && dagit
   - openMode: split-right
     command: echo SplitTerminal && clear
