@@ -1,4 +1,4 @@
-from dagster import pipeline, solid, RepositoryDefinition, InputDefinition
+from dagster import pipeline, solid, RepositoryDefinition, InputDefinition, repository
 
 
 @solid
@@ -17,6 +17,6 @@ def goodbye_world(context, number):
 def my_pipeline():
     goodbye_world(hello_world())
 
-
-def define_repository():
-    return RepositoryDefinition("my_repository", pipeline_defs=[my_pipeline])
+@repository
+def my_repository():
+    return [my_pipeline]
