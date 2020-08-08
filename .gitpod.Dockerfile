@@ -1,5 +1,4 @@
 FROM gitpod/workspace-full
-
 USER gitpod
 
 # Install wxPython dependencies
